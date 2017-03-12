@@ -5,7 +5,7 @@ Supported languages:
  * Javascript.
 
 ## Demo:
-![Extract function](https://github.com/mpi/atom-refactorings/raw/master/demo/extract-function.gif "Extract function")
+![Extract function](https://raw.githubusercontent.com/mpi/atom-js-refactorings/master/demo/extract-function.gif "Extract function")
 
 ## Supported refactorings:
  * Rename identifier (`Shift + Alt + R`),

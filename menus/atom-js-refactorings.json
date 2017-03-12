@@ -1,0 +1,39 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Refactorings",
+        "submenu": [
+          {
+            "label": "Extract Function",
+            "command": "atom-js-refactorings:extract-function"
+          },
+          {
+            "label": "Rename Identifier",
+            "command": "atom-js-refactorings:rename-identifier"
+          }
+        ]
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Refactorings",
+          "submenu": [
+            {
+              "label": "Extract Function",
+              "command": "atom-js-refactorings:extract-function"
+            },
+            {
+              "label": "Rename Identifier",
+              "command": "atom-js-refactorings:rename-identifier"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

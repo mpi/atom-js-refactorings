@@ -1,0 +1,26 @@
+{
+  "name": "atom-js-refactorings",
+  "main": "./lib/atom-js-refactorings",
+  "version": "0.0.5",
+  "description": "Javascript refactoring support for Atom editor",
+  "keywords": [
+    "atom",
+    "refactoring",
+    "javascript"
+  ],
+  "repository": "https://github.com/mpi/atom-js-refactorings",
+  "license": "MIT",
+  "author": {
+    "name": "Michał Piotrkowski"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "scripts": {
+    "test": "apm test"
+  },
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "lodash": "^4.17.4"
+  }
+}

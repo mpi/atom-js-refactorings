@@ -1,0 +1,7 @@
+{
+  "atom-workspace": {
+    "shift-alt-up": "atom-js-refactorings:expand-selection",
+    "shift-alt-r": "atom-js-refactorings:rename-identifier",
+    "shift-alt-e": "atom-js-refactorings:extract-function"
+  }
+}

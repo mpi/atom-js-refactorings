@@ -1,4 +1,4 @@
-# atom-refactorings package
+# Atom Javascript Refactorings
 
 Package providing refactorings catalog for [Atom](https://atom.io/) editor, based on [Babel.js](https://babeljs.io/).
 Supported languages:

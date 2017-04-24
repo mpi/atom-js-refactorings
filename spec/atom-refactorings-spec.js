@@ -4,7 +4,7 @@ import * as _ from 'lodash';
 import test from './test-utils';
 import '../lib/atom-js-refactorings';
 
-fdescribe('Atom Javascript Refactorings Package', () => {
+describe('Atom Javascript Refactorings Package', () => {
 
   let workspace, packageActivation, editorOpening;
 
@@ -28,6 +28,8 @@ fdescribe('Atom Javascript Refactorings Package', () => {
       testCase('expression-statement.js');
       testCase('expression.js');
       testCase('import.js');
+      testCase('already-taken-identifier.js');
+      // testCase('comment.js');
     });
 
     describe('provides expand-selection capability', () => {
@@ -35,6 +37,7 @@ fdescribe('Atom Javascript Refactorings Package', () => {
       var testCase = fromDir('expand-selection');
 
       testCase('block.js');
+      testCase('block-expand.js');
     });
 
     describe('provides rename-identifier refactoring', () => {

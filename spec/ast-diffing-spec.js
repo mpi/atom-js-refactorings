@@ -13,22 +13,28 @@ describe('Refactor', () => {
     editor = new TextEditor();
   });
 
-  it('applies insertion on editor', () => {
+  it('applies changes on editor', () => {
 
     // given:
     var code = `
-var x = 1;
-var y = 2;
-`;
+function add(a, b) {
+   var xy = 5;
+  return a + b;
+}
+function subtract(a, b) {
+     return a - b;
+}
+  console. log('123' ) ;
+    `;
     editor.setText(code);
 
     // when:
     var r = refactor(editor.getText());
     r.traverse({
-      Program: path => {
-        path.get('body.1').insertBefore(
-          types.expressionStatement(types.identifier('code'))
-        );
+      FunctionDeclaration: path => {
+        var unused = types.identifier('unused');
+        path.node.params.push(unused);
+        r.select(unused);
       }
     });
     r.applyOn(editor);
@@ -36,40 +42,16 @@ var y = 2;
     // then:
     //debug();
     expect(editor.getText()).toEqual(`
-var x = 1;
-code;
-var y = 2;`);
+function add(a, b, unused) {
+  var xy = 5;
+  return a + b;
+}
+function subtract(a, b, unused) {
+  return a - b;
+}
+  console. log('123' ) ;
+    `);
   });
-
-  it('applies deletion on editor', () => {
-
-    // given:
-    var code = `
-
-
-  var x = 1;
-var y = 2;
-var z = 3;
-`;
-    editor.setText(code);
-
-    // when:
-    var r = refactor(editor.getText());
-    r.traverse({
-      Program: path => {
-        path.get('body.1').remove();
-      }
-    });
-    r.applyOn(editor);
-
-    // then:
-    //debug();
-    expect(editor.getText()).toEqual(`
-var x = 1;
-var z = 3;
-`);
-  });
-
 
   function debug(){
     console.log('Editor:\n' + editor.getText());

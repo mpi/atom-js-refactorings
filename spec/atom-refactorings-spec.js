@@ -32,7 +32,7 @@ describe('Atom Javascript Refactorings Package', () => {
       // testCase('comment.js');
     });
 
-    fdescribe('provides extract-variable refactoring', () => {
+    describe('provides extract-variable refactoring', () => {
 
       var testCase = fromDir('extract-variable');
 
@@ -59,6 +59,14 @@ describe('Atom Javascript Refactorings Package', () => {
       testCase('function-usage.js');
       testCase('recursive-function.js');
     });
+
+    fdescribe('provides introduce-parameter refactoring', () => {
+
+      var testCase = fromDir('introduce-parameter');
+
+      testCase('simple.js');
+    });
+
 
     beforeEach(() => {
       waitsForPromise(() => packageActivation);

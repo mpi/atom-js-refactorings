@@ -32,6 +32,16 @@ describe('Atom Javascript Refactorings Package', () => {
       // testCase('comment.js');
     });
 
+    fdescribe('provides extract-variable refactoring', () => {
+
+      var testCase = fromDir('extract-variable');
+
+      testCase('string-literal.js');
+      testCase('arithmetic-expression.js');
+      testCase('function-invocation.js');
+      testCase('block-with-one-expression.js');
+    });
+
     describe('provides expand-selection capability', () => {
 
       var testCase = fromDir('expand-selection');

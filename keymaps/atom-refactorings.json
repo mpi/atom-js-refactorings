@@ -2,6 +2,7 @@
   "atom-workspace": {
     "shift-alt-w": "atom-js-refactorings:expand-selection",
     "shift-alt-r": "atom-js-refactorings:rename-identifier",
-    "shift-alt-e": "atom-js-refactorings:extract-function"
+    "shift-alt-e": "atom-js-refactorings:extract-function",
+    "shift-alt-v": "atom-js-refactorings:extract-variable"
   }
 }
